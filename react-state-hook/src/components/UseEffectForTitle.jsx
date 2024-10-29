@@ -1,10 +1,9 @@
-// UseEffectForTitle.js
 import React, { useState, useEffect } from "react";
 
 const UseEffectForTitle = () => {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => setCount(count + 1);
+  const handleClick = () => setCount((prevCount) => prevCount + 1);
 
   useEffect(() => {
     document.title = `Count: ${count}`;

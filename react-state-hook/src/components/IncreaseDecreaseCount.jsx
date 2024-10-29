@@ -4,8 +4,10 @@ import React, { useState } from "react";
 const IncreaseDecreaseCount = () => {
   const [count, setCount] = useState(0);
 
-  const increase = () => setCount(count + 1);
-  const decrease = () => setCount(count - 1);
+  const increase = () => setCount((prevCount) => prevCount + 1);
+
+  const decrease = () => setCount((prevCount) => prevCount - 1);
+
   const reset = () => setCount(0);
 
   return (
@@ -19,3 +21,5 @@ const IncreaseDecreaseCount = () => {
 };
 
 export default IncreaseDecreaseCount;
+// useState manages the state variable for the click count.
+// useEffect manages side effects, such as changing the document
